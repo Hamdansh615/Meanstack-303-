@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <div>
+        <h1  align="center"> School Management System</h1>
+        <hr>
+        <h1>Student Details</h1>
+        <p id="name" style="display: inline;"></p>
+        <p id="f_name"></p>
+        <p id="class1"></p>
+        <p id="class2"></p>
+        <p id="p_marks"></p>
+        <p id="rno"></p>
+    </div>
+    <hr>
+    <div>
+        <h1>Admission Information</h1>
+        <p id="adm_fees"></p>
+        <p id="monthly_fees"></p>
+        <p id="extra_fees"></p>
+        <p id="game_fees"></p>
+    </div>
+    <hr>
+    <div>
+        <h1>Marks Obtain</h1>
+        <div>
+            <table>
+                <tr>
+                    <td>English</td>
+                    <td id="eng_marks"></td>
+                    <td id="eng_status"></td>
+                </tr>
+                <tr>
+                    <td>Physics</td>
+                    <td id="phy_marks"></td>
+                    <td id="phy_status"></td>
+                </tr>
+            </table>
+        </div>
+        </div>
+</body>
+</html>
+<script type="text/javascript">
+    var name = "NAME : Hamdan Shaikh";
+    var f_name = "FATHER NAME : Ateeq Shaikh";
+    var class1 = "CLASS 6";
+    var class2 = "LAST : 5";
+    var p_marks = "LAST PENDING MARKS : 85";
+    var rno = "ROLL NO # 198";
+    var adm_fees = "Addmission Fees = 7000";
+    var monthly_fees = "Mothly Fees = 3000";
+    var extra_fees = " Extracirculum Fees = 500";
+    var game_fees = "Game fees = 100";
+    var total_marks = 100;
+    var eng_marks = 89;
+    var phy_marks = 25;
+    $('document').ready(function() {
+        document.getElementById("name").innerHTML = name;
+        document.getElementById("f_name").innerHTML = f_name;
+        document.getElementById("class1").innerHTML = class1;
+        document.getElementById("class2").innerHTML = class2;
+        document.getElementById("p_marks").innerHTML = p_marks;
+        document.getElementById("rno").innerHTML = rno;
+        document.getElementById("adm_fees").innerHTML = adm_fees;
+        document.getElementById("monthly_fees").innerHTML = monthly_fees;
+        document.getElementById("extra_fees").innerHTML = extra_fees;
+        document.getElementById("game_fees").innerHTML = game_fees;
+        document.getElementById("eng_marks").innerHTML = eng_marks;
+        document.getElementById("phy_marks").innerHTML = phy_marks;
+        if(eng_marks < 35)
+        {
+            var eng_status = "fail";
+            document.getElementById("eng_status").innerHTML = eng_status;
+        }
+        else if(eng_marks >= 50)
+        {
+            var eng_status = "pass";
+            document.getElementById("eng_status").innerHTML = eng_status;
+        }
+        if(phy_marks < 35)
+        {
+            var phy_status = "fail";
+            document.getElementById("phy_status").innerHTML = phy_status;
+        }
+        else if(phy_marks >= 50)
+        {
+            var phy_status = "pass";
+            document.getElementById("phy_status").innerHTML = phy_status;
+        }
+    });
+       
+</script>
